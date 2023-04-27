@@ -1,0 +1,28 @@
+.game-board{
+    .cards-wrapper{
+        position: absolute;
+        top: 50px;
+        left: 20%;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+    .counter{
+        position: absolute;
+        top: 20px;
+        left: 2%;
+        font-family: cursive;
+        color: antiquewhite;
+        font-size: larger;
+        text-shadow: 0  1px 1px 2px red;
+    }
+    .juego_terminado{
+        position: absolute;
+        top: 80px;
+        left: 2%;
+        font-family: cursive;
+        color: antiquewhite;
+        font-size: larger;
+        text-shadow: 0  1px 1px 2px red;
+    }
+}

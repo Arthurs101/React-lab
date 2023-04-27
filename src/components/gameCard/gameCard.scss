@@ -1,0 +1,58 @@
+$c-bezier: cubic-bezier(.17,.67,.83,.67);
+.Card {
+    position: relative;
+    height: 200px;
+    width: 150px;
+    perspective: 2000px;
+    margin: 5px;
+   
+    div{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+        transition: all 500ms $c-bezier;
+        
+    }
+    .front{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 2rem;
+        background: black;
+        transform:   rotateY(-180deg);
+        img{
+            height: 200px;
+            width: 150px;
+            border-radius: 2rem;
+            
+        }
+        p{
+            max-width: 100px;
+            overflow-wrap: break-word;
+            font-size: small;
+            justify-content: center;
+            color: white;
+        }
+    }
+    .back{
+        border-radius: 2rem;
+        background: #00c3ff;
+        img{
+            height: 200px;
+            width: 150px;
+            border-radius: 2rem;
+            box-shadow: 0 3px 10px 0px white;
+        }
+    }
+    .inner {
+        &.flipped {
+        transform: rotateY(-180deg);
+        }
+    }
+}
